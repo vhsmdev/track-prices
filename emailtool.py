@@ -9,15 +9,15 @@ def send_email():
     msg = email.message.Message()
     msg['Subject'] = "Câmera FUJIFILM GFX 50R Médio Formato (Somente Corpo)!!!!"
 
-    msg['From'] = 'teste@startz.space'
-    msg['To'] = 'vmoreira021@gmail.com'
+    msg['From'] = '[EMAIL DO REMETENTE]'
+    msg['To'] = '[EMAIL DO DESTINATARIO]'
 
-    password = "teste324*$#"
+    password = "[SENHA]"
 
     msg.add_header("Content-Type", "text/html")
     msg.set_payload(email_content)
 
-    s = smtplib.SMTP("mail.startz.space: 587")
+    s = smtplib.SMTP("[SESRVIDOR DE ENTRADA]: [PORTA]")
     s.starttls()
     s.login(msg["From"], password)
 
