@@ -17,7 +17,7 @@ def send_email():
     msg.add_header("Content-Type", "text/html")
     msg.set_payload(email_content)
 
-    s = smtplib.SMTP("mail.startz.space", 587)
+    s = smtplib.SMTP("mail.startz.space: 587")
     s.starttls()
     s.login(msg["From"], password)
 
