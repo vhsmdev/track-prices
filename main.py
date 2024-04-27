@@ -16,8 +16,5 @@ title = soup.find("h1", class_="product-name").get_text()
 current_price = soup.find('input', id='preco_atual')
 current_price = float(current_price["value"])
 
-print(current_price)
-send_email()
-if current_price < 8000:
-    print("feito")
+if current_price < 30000:
     send_email()
